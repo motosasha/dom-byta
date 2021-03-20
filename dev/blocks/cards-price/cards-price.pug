@@ -1,0 +1,12 @@
+//- Все примеси в этом файле должны начинаться c имени блока (cards-price)
+
+mixin cards-price(vars, title)
+	each item in vars
+		.cards-price__item
+			.service-tile
+				img.service-tile__img(src='/img/img__price_' + item.img + '.jpg', alt= item.alt)
+				.service-tile__content
+					h3.service-tile__heading!= item.title
+					p.service-tile__description Цена от #[span #{item.price} руб.]
+					a.button.service-tile__button(href='#') Рассчитать стоимость
+						span.button__helper

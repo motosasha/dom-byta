@@ -1,0 +1,85 @@
+// В этом файле должны быть стили для БЭМ-блока city-select, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.city-select {
+	background: var(--color-light-grey);
+	margin: 0 -16px;
+	padding: 8px 16px;
+	position: relative;
+	@media (min-width: $screen-sm) {
+		background: transparent;
+		margin: 0;
+		padding: 0;
+	}
+	&__top {
+		align-items: center;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		padding: 8px 0;
+	}
+	&__title {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 1.25;
+		user-select: none;
+		white-space: nowrap;
+		@media (min-width: $screen-sm) {
+			font-size: 14px;
+		}
+	}
+	&__arrow {
+		height: 6px;
+		margin-left: 12px;
+		transition: transform .125s ease;
+		width: 10px;
+	}
+	&_open &__arrow {
+		transform: rotate(180deg);
+	}
+	&__drop {
+		height: 0;
+		overflow: hidden;
+		@media (min-width: $screen-sm) {
+			background: var(--color-white);
+			border-radius: 0 0 8px 8px;
+			margin: 0 -16px;
+			min-width: calc(100% + 32px);
+			position: absolute;
+			z-index: 3;
+		}
+	}
+	&_open &__drop {
+		height: auto;
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		margin: 0 0 8px;
+		padding: 0;
+		@media (min-width: $screen-sm) {
+			margin: 0;
+			padding: 4px 0 24px;
+		}
+	}
+	&__item {
+		@media (min-width: $screen-sm) {
+			padding: 0 16px;
+		}
+	}
+	&__link {
+		color: var(--color-typography-grey);
+		display: inline-block;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.15;
+		padding: 8px 0;
+		text-decoration: none;
+		white-space: nowrap;
+		&:hover {
+			color: var(--color-typography-accent);
+		}
+	}
+}

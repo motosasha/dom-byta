@@ -1,0 +1,49 @@
+// В этом файле должны быть стили для БЭМ-блока header-servise, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.header-service {
+	
+	&__inner {
+		//@include header-typography;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-typography-inverse);
+		padding: 12px 0;
+	}
+	&__name {
+		font-size: 12px;
+		@media (min-width: $screen-sm) {
+			font-size: 16px;
+		}
+	}
+	&__choosen {
+		display: flex;
+		align-items: center;
+		.header-servise__name,
+		.header-servise__switcher-icon {
+			transition: all .25s ease;
+		}
+		&:hover {
+			.header-servise__name {
+				color: var(--color-orange);
+			}
+			.header-servise__switcher-icon {
+				fill: var(--color-orange);
+			}
+		}
+	}
+	&__switcher {
+		cursor: pointer;
+		& + & {
+			margin: 0 0 0 32px;
+		}
+	}
+	&__switcher-icon {
+		fill: var(--color-switcher-white);
+		width: 10px;
+		height: 6px;
+		margin: 0 0 0 14px;
+	}
+}

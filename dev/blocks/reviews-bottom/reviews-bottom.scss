@@ -1,0 +1,21 @@
+// В этом файле должны быть стили для БЭМ-блока reviews-bottom, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.reviews-bottom {
+	padding-top: 24px;
+	@media (min-width: $screen-sm) {
+		padding-top: 40px;
+	}
+	&__line {
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 1.44;
+		text-align: center;
+		margin-bottom: 16px;
+	}
+	&__button {
+		margin: 0 auto 16px;
+		width: 174px;
+	}
+}

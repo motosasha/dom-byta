@@ -1,0 +1,40 @@
+// В этом файле должны быть стили для БЭМ-блока article-side-services, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.article-side-services {
+	display: grid;
+	grid-gap: 8px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	&__item {
+	
+	}
+	&__link {
+		align-items: center;
+		background: var(--color-light-grey);
+		border-radius: 8px;
+		color: var(--color-dark-grey);
+		display: flex;
+		justify-content: space-between;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 1;
+		padding: 16px;
+		&:hover {
+			background: linear-gradient(120deg, #f3a000 -21.5%, #f38300 213%);
+			color: var(--color-typography-inverse);
+		}
+	}
+	&__icon {
+		fill: var(--color-typography-accent);
+		flex: 0 0 auto;
+		height: 6px;
+		transform: rotate(-90deg);
+		width: 10px;
+	}
+	&__link:hover &__icon {
+		fill: var(--color-typography-inverse);
+	}
+}

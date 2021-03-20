@@ -1,0 +1,12 @@
+//- Все примеси в этом файле должны начинаться c имени блока (faq)
+
+mixin faq(items)
+	.faq__accordeon
+		each item in items
+			.faq__collapse
+				.faq__collapse-header
+					.faq__icon
+					.faq__title!= item.title
+				.faq__collapse-body
+					.faq__collapse-inner
+						p!= item.info

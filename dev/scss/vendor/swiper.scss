@@ -1,0 +1,61 @@
+// В этом файле должны быть стили для БЭМ-блока swiper, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.swiper-button {
+	appearance: none;
+	border-radius: 50%;
+	cursor: pointer;
+	display: none;
+	height: 32px;
+	outline: 0;
+	top: 50%;
+	transition: all .25s ease;
+	user-select: none;
+	width: 32px;
+	z-index: 2 !important;
+	@media (min-width: $screen-lg) {
+		display: block;
+	}
+	&-prev::after,
+	&-next::after {
+		content: none;
+	}
+	&-prev {
+		left: 0;
+		transform: translateX(-48px);
+		@media (min-width: 1360px) {
+			transform: translateX(-64px);
+		}
+	}
+	&-next {
+		right: 0;
+		transform: translateX(48px);
+		@media (min-width: 1360px) {
+			transform: translateX(64px);
+		}
+	}
+	&-icon {
+		width: 32px;
+		height: 32px;
+	}
+}
+.swiper-pagination {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	z-index: 2 !important;
+	.swiper-pagination-bullet {
+		height: 4px;
+		width: 4px;
+		&-active {
+			background: var(--color-typography-accent);
+			height: 6px;
+			width: 6px;
+		}
+	}
+	.swiper-pagination-bullet + .swiper-pagination-bullet {
+		margin-left: 10px;
+	}
+}

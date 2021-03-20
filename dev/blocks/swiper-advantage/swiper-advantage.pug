@@ -1,0 +1,10 @@
+//- Все примеси в этом файле должны начинаться c имени блока (swiper-advantage)
+
+mixin swiper-advantage(vars, title)
+	each item in vars
+		.swiper-slide.swiper-advantage__slide
+			.swiper-advantage__tile
+				svg.svg.swiper-advantage__icon
+					use(xlink:href='/img/svgSprite.svg#icon__' + item.icon)
+				h3.swiper-advantage__heading!= item.title
+				p.swiper-advantage__description!= item.description

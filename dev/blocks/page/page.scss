@@ -1,0 +1,106 @@
+// В этом файле должны быть стили для БЭМ-блока page, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	min-height: 100%;
+	position: relative;
+	&__header {
+		flex: 0 0 auto;
+		position: fixed;
+		width: 100%;
+		z-index: 5;
+	}
+	&__menu {
+		flex: 0 0 auto;
+		height: 100vh;
+		left: 0;
+		opacity: 0;
+		pointer-events: none;
+		position: fixed;
+		top: 0;
+		transform: translateY(-24px);
+		transition: all .25s ease;
+		width: 100%;
+		z-index: 3;
+		@media (min-width: $screen-sm) {
+			display: none;
+		}
+		
+		
+		.open-nav & {
+			opacity: 1;
+			pointer-events: auto;
+			transform: translateY(0);
+		}
+	}
+	&__body {
+		flex: 1 1 auto;
+		padding-top: 62px;
+		@media (min-width: $screen-sm) {
+			padding-top: 161px;
+		}
+		@media (min-width: $screen-lg) {
+			padding-top: 112px;
+		}
+	}
+	&__footer {
+		flex: 0 0 auto;
+	}
+	
+	&__top {
+		background: var(--color-light-grey);
+		padding: 16px 0 24px;
+		position: relative;
+		@media (min-width: $screen-sm) {
+			padding: 32px 0;
+		}
+		&_article {
+			background: url('/img/img__hero_articles.jpg') no-repeat center center;
+			background-size: cover;
+			color: var(--color-typography-inverse);
+			min-height: 480px;
+			@media (min-width: $screen-sm) {
+				padding: 32px 0;
+				min-height: 420px;
+			}
+			&::after {
+				background: var(--color-black-tint);
+				content: '';
+				display: block;
+				height: 100%;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+			}
+		}
+		.grid {
+			position: relative;
+			z-index: 2;
+		}
+	}
+	&__content {
+		padding: 16px 0 48px;
+		@media (min-width: $screen-sm) {
+			padding: 16px 0 56px;
+		}
+	}
+	&__title {
+		color: #0d0d0d;
+		font-size: 26px;
+		font-weight: 700;
+		line-height: 1.5;
+		margin: 0;
+		@media (min-width: $screen-sm) {
+			font-size: 44px;
+			line-height: 1.25;
+		}
+	}
+	&__top_article &__title {
+		color: var(--color-typography-inverse);
+	}
+}

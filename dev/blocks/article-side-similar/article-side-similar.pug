@@ -1,0 +1,10 @@
+//- Все примеси в этом файле должны начинаться c имени блока (article-side-similar)
+
+mixin article-side-similar(vars)
+	ul.article-side-similar
+		each item in vars
+			li.article-side-similar__item
+				img.article-side-similar__img(src='/img/img__article-content_cabel.jpg', alt='')
+				.article-side-similar__info
+					.article-side-similar__date 17 декабря 2020
+					a.article-side-similar__link(href='#')!= item.title

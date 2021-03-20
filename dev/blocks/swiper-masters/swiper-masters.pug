@@ -1,0 +1,13 @@
+//- Все примеси в этом файле должны начинаться c имени блока (swiper-masters)
+
+mixin swiper-masters(vars)
+	each item in vars
+		.swiper-slide.swiper-masters__slide
+			.swiper-masters__card
+				.swiper-masters__name!= item.name
+				img.swiper-masters__img(src='/img/avatar__worker_0' + item.img + '.png', alt=item.name)
+				.swiper-masters__rating Рейтинг #[span #{item.rate}]
+				.swiper-masters__stars
+					.stars(style='--rating:' + item.rate + ';')
+				.swiper-masters__experience!= item.xp
+				.swiper-masters__works!= item.works

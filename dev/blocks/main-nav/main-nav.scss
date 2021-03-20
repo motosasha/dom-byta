@@ -1,0 +1,18 @@
+// В этом файле должны быть стили для БЭМ-блока main-nav, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.main-nav {
+	background: var(--color-dark-grey);
+	height: 100%;
+	overflow: hidden;
+	overflow-y: auto;
+	width: 100%;
+	z-index: 2;
+	@media (min-width: $screen-sm) {
+		display: none;
+	}
+	&__inner {
+		padding: 62px 16px 0;
+	}
+}

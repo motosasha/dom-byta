@@ -1,0 +1,23 @@
+// В этом файле должны быть стили для БЭМ-блока side-nav, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.side-nav {
+	background: var(--color-white);
+	display: grid;
+	grid-gap: 16px;
+	margin: 0 -16px;
+	padding: 24px 16px;
+	&__item {
+		color: var(--color-typography-accent);
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 1.25;
+		text-decoration: none;
+		transition: color .25s ease;
+		white-space: nowrap;
+		&:hover {
+			color: var(--color-typography);
+		}
+	}
+}

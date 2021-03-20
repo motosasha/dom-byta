@@ -1,0 +1,110 @@
+// В этом файле должны быть стили для БЭМ-блока article, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.article {
+	padding: 0 0 24px;
+	@media (min-width: $screen-sm) {
+		padding: 16px 0 24px;
+	}
+	&__lead {
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 1.67;
+		margin: 0 0 12px;
+		@media (min-width: $screen-sm) {
+			font-size: 20px;
+			line-height: 1.6;
+			margin: 0 0 24px;
+		}
+	}
+	&__slider {
+		margin: 16px 0 24px;
+		position: relative;
+		@media (min-width: $screen-sm) {
+			margin: 24px 0 32px;
+		}
+	}
+	h2 {
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 1.6;
+		margin: 16px 0 8px;
+	}
+	h3 {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 1.6;
+		margin: 16px 0 8px;
+	}
+	h4 {
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 1.6;
+		margin: 16px 0 8px;
+	}
+	p {
+		font-size: 16px;
+		line-height: 1.62;
+		margin-bottom: 16px;
+	}
+	q {
+		font-weight: 600;
+		font-style: italic;
+	}
+	a {
+		color: var(--color-typography-accent);
+		font-weight: 600;
+		text-decoration-line: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	ol{
+		margin: 0 0 16px;
+		padding: 0 0 0 32px;
+	}
+	li {
+		font-size: 16px;
+		line-height: 1.62;
+	}
+	ul {
+		list-style: none;
+		margin: 0 0 16px;
+		padding: 0;
+	}
+	ul li {
+		padding: 0 0 0 16px;
+		position: relative;
+		&::before {
+			content: '–';
+			height: auto;
+			left: 0;
+			position: absolute;
+			width: 8px;
+		}
+	}
+	img {
+		display: block;
+		height: auto;
+		max-height: 720px;
+		width: 100%;
+	}
+	blockquote {
+		background: var(--color-light-grey);
+		color: var(--color-dark-grey);
+		font-size: 18px;
+		font-style: italic;
+		font-weight: 700;
+		line-height: 1.67;
+		margin: 24px 0;
+		padding: 24px;
+		@media (min-width: $screen-sm) {
+			font-size: 20px;
+			line-height: 1.6;
+			padding: 32px;
+		}
+		
+		
+	}
+}

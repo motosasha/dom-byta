@@ -1,0 +1,207 @@
+// В этом файле должны быть стили для БЭМ-блока footer, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.footer {
+	padding-bottom: 16px;
+	@media (min-width: $screen-sm) {
+		padding-bottom: 32px;
+	}
+	&__inner {
+		background: var(--color-dark-grey);
+		padding: 16px 16px 32px;
+		@media (min-width: $screen-sm) {
+			padding: 20px 24px 32px;
+		}
+	}
+	&__top {
+		box-shadow: inset 0 -1px #5d5d5d;
+		display: grid;
+		grid-gap: 32px;
+		grid-template-areas:
+			'logo logo'
+			'services nav';
+		padding-bottom: 24px;
+		@media (min-width: $screen-sm) {
+			grid-template-columns: 160px 1fr 1fr;
+			grid-template-areas:
+				'logo services nav';
+		}
+		@media (min-width: $screen-lg) {
+			align-items: center;
+			display: flex;
+			grid-gap: 0;
+			padding-bottom: 20px;
+		}
+	}
+	&__bottom {
+		display: grid;
+		grid-gap: 32px;
+		grid-template-areas:
+			'address'
+			'connection'
+			'wa';
+		padding-top: 16px;
+		@media (min-width: $screen-sm) {
+			grid-template-columns: 160px 1fr 1fr;
+			grid-template-areas:
+				'. address address'
+				'. connection connection'
+				'. wa wa';
+		}
+		@media (min-width: $screen-md) {
+			grid-template-columns: 160px auto auto;
+			grid-template-areas:
+				'. address connection'
+				'. wa . ';
+		}
+		@media (min-width: $screen-lg) {
+			grid-template-columns: auto 300px 292px;
+			grid-template-areas:
+				'address connection wa';
+		}
+	}
+	&__logo {
+		grid-area: logo;
+		@media (min-width: $screen-lg) {
+			margin-right: 40px;
+		}
+	}
+	&__logo-img {
+		fill: var(--color-white);
+		height: 22px;
+		width: 57px;
+		@media (min-width: $screen-sm) {
+			height: 29px;
+			width: 74px;
+		}
+	}
+	&__services {
+		display: grid;
+		grid-area: services;
+		grid-gap: 16px;
+		@media (min-width: $screen-lg) {
+			display: flex;
+			grid-gap: 0;
+			order: 2;
+			width: 624px;
+			.footer__link + .footer__link {
+				margin-left: 32px;
+			}
+		}
+	}
+	&__nav {
+		align-self: flex-start;
+		display: grid;
+		grid-area: nav;
+		grid-gap: 16px;
+		@media (min-width: $screen-lg) {
+			align-self: center;
+			display: flex;
+			grid-gap: 0;
+			margin-right: auto;
+			.footer__link + .footer__link {
+				margin-left: 24px;
+			}
+		}
+	}
+	&__link {
+		color: var(--color-white);
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 1.15;
+		text-decoration: none;
+		transition: opacity .25s ease;
+		&:hover {
+			opacity: .8;
+		}
+	}
+	&__address {
+		color: #ababab;
+		font-size: 14px;
+		grid-area: address;
+		font-style: normal;
+		line-height: 1.71;
+	}
+	&__mail {
+		color: var(--color-white);
+		text-decoration-line: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&__connection {
+		grid-area: connection;
+	}
+	&__phone {
+		color: var(--color-white);
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 1.2;
+		text-decoration: none;
+		transition: opacity .25s ease;
+		&:hover {
+			opacity: .8;
+		}
+	}
+	&__button {
+		margin-top: 24px;
+		width: 169px;
+	}
+	&__wa {
+		grid-area: wa;
+		margin-top: -16px;
+		@media (min-width: $screen-lg) {
+			margin-top: 0;
+		}
+	}
+	&__whatsapp {
+		margin-top: -16px;
+		text-decoration: none;
+		transition: opacity .25s ease;
+		&:hover {
+			opacity: .8;
+		}
+	}
+	&__whatsapp-icon {
+		height: 30px;
+		margin-top: 12px;
+		width: 30px;
+	}
+	&__whatsapp-title {
+		color: #ababab;
+		font-size: 14px;
+		line-height: 1.43;
+	}
+	&__under {
+		align-items: center;
+		background: var(--color-light-grey);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 24px;
+		@media (min-width: $screen-md) {
+			flex-direction: row;
+		}
+	}
+	&__copy {
+		color: inherit;
+		font-size: 14px;
+		line-height: 1.15;
+		text-align: center;
+	}
+	&__copy-link {
+		color: inherit;
+		font-size: 14px;
+		line-height: 1.15;
+		margin: 16px 0 0;
+		text-align: center;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+		@media (min-width: $screen-md) {
+			margin: 0 0 0 56px;
+		}
+	}
+}

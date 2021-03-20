@@ -1,0 +1,77 @@
+// В этом файле должны быть стили для БЭМ-блока services-nav, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.services-nav {
+	display: flex;
+	justify-content: space-between;
+	@media (min-width: $screen-md) {
+		justify-content: center;
+	}
+	&__section {
+		flex: 0 0 auto;
+		position: relative;
+		@media (min-width: $screen-md) {
+			& + & {
+				margin-left: 32px;
+			}
+		}
+	}
+	&__top {
+		align-items: center;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		padding: 12px 0;
+	}
+	&__title {
+		color: var(--color-typography-inverse);
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 1.15;
+	}
+	&__arrow {
+		fill: var(--color-typography-inverse);
+		height: 6px;
+		margin-left: 10px;
+		transition: transform .125s ease;
+		width: 10px;
+	}
+	&_open &__arrow {
+		transform: rotate(180deg);
+	}
+	&__drop {
+		background: var(--color-dark-grey);
+		border-radius: 0 0 8px 8px;
+		height: 0;
+		margin: 0 -16px;
+		min-width: calc(100% + 32px);
+		overflow: hidden;
+		position: absolute;
+		z-index: 2;
+	}
+	&_open &__drop {
+		height: auto;
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		margin: 0;
+		padding: 8px 16px 16px;
+	}
+	&__item {}
+	&__link {
+		color: #ccc;
+		display: inline-block;
+		font-size: 14px;
+		line-height: 1.15;
+		padding: 8px 0;
+		text-decoration: none;
+		transition: color .25s ease;
+		white-space: nowrap;
+		&:hover {
+			color: var(--color-white);
+		}
+	}
+}

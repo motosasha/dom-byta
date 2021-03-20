@@ -1,0 +1,36 @@
+// В этом файле должны быть стили для БЭМ-блока article-side-similar, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.article-side-similar {
+	display: grid;
+	grid-gap: 24px;
+	&__item {
+		display: flex;
+	}
+	&__img {
+		border-radius: 8px;
+		flex: 0 0 auto;
+		height: 96px;
+		margin-right: 16px;
+		object-fit: cover;
+		width: 87px;
+	}
+	&__info {}
+	&__date {
+		color: var(--color-typography-grey);
+		font-size: 14px;
+		line-height: 1.86;
+	}
+	&__link {
+		color: #0d0d0d;
+		display: block;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 1.37;
+		transition: color .25s ease;
+		&:hover {
+			color: var(--color-typography-accent);
+		}
+	}
+}

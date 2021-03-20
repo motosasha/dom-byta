@@ -1,0 +1,25 @@
+// В этом файле должны быть стили для БЭМ-блока swiper-feedback, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.swiper-feedback {
+	position: relative;
+	margin-top: 10px;
+	padding: 12px 0 16px;
+	@media (min-width: $screen-sm) {
+		margin: 28px -16px 16px;
+		padding: 12px 16px 16px;
+	}
+	&__wrapper {}
+	&__slide {
+		height: auto;
+		width: calc(100% - 64px);
+		@media (min-width: $screen-sm) {
+			width: inherit;
+		}
+	}
+	&__pagination {}
+	&__button {
+		background: var(--color-light-grey);
+	}
+}

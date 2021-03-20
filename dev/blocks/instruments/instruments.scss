@@ -1,0 +1,23 @@
+// В этом файле должны быть стили для БЭМ-блока instruments, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.instruments {
+	&__inner {
+		padding: 32px 0;
+		@media (min-width: $screen-sm) {
+			padding: 64px 0 68px 0;
+		}
+	}
+	&__slider {
+		margin: 0 -16px;
+		padding-bottom: 6px;
+		position: relative;
+		@media (min-width: $screen-sm) {
+			margin: 0;
+		}
+		@media (min-width: $screen-lg) {
+			padding: 0;
+		}
+	}
+}

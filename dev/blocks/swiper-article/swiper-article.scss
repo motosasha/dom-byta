@@ -1,0 +1,57 @@
+// В этом файле должны быть стили для БЭМ-блока swiper-article, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.swiper-article {
+	padding-bottom: 48px;
+	&__wrapper {}
+	&__slide {
+		align-items: center;
+		background: var(--color-light-grey);
+		display: flex;
+		justify-content: center;
+		height: auto;
+	}
+	&__pagination {
+		bottom: 12px;
+		font-size: 14px;
+		font-weight: 500;
+		left: auto;
+		line-height: 1.15;
+		right: 40px;
+		width: 56px;
+		@media (min-width: $screen-sm) {
+			bottom: 8px;
+			right: 32px;
+		}
+	}
+	&__button {
+		background: var(--color-light-grey);
+		display: block;
+		height: 40px;
+		padding: 4px;
+		width: 40px;
+		@media (min-width: $screen-sm) {
+			height: 32px;
+			padding: 0;
+			width: 32px;
+		}
+	}
+	&__button_prev {
+		bottom: 0;
+		left: auto;
+		right: 94px;
+		top: auto;
+		transform: none !important;
+		@media (min-width: $screen-sm) {
+			right: 88px !important;
+		}
+	}
+	&__button_next {
+		bottom: 0;
+		left: auto;
+		right: 0;
+		top: auto;
+		transform: none !important;
+	}
+}

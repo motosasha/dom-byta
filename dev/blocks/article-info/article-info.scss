@@ -1,0 +1,29 @@
+// В этом файле должны быть стили для БЭМ-блока article-info, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.article-info {
+	display: grid;
+	grid-gap: 32px;
+	grid-template-columns: 1fr 1fr;
+	margin-top: 24px;
+	@media (min-width: $screen-sm) {
+		grid-gap: 24px;
+		grid-template-columns: 1fr;
+		margin-top: 16px;
+	}
+	&__item {}
+	&__title {
+		color: var(--color-light-grey);
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.15;
+		margin-bottom: 8px;
+	}
+	&__line {
+		color: var(--color-light-grey);
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 1.25;
+	}
+}

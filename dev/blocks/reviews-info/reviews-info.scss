@@ -1,0 +1,25 @@
+// В этом файле должны быть стили для БЭМ-блока reviews-info, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.reviews-info {
+	margin-bottom: 24px;
+	@media (min-width: $screen-sm) {
+		margin: 16px 0 24px;
+	}
+	&__line {
+		color: #969696;
+		font-size: 14px;
+		line-height: 1.25;
+		@media (min-width: $screen-sm) {
+			font-size: 16px;
+		}
+		span {
+			color: var(--color-typography);
+			font-weight: 600;
+		}
+		& + & {
+			margin-top: 8px;
+		}
+	}
+}

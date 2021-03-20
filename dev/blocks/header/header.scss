@@ -1,0 +1,172 @@
+// В этом файле должны быть стили для БЭМ-блока header, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.header {
+	background: var(--color-white);
+	position: fixed;
+	width: 100%;
+	z-index: 5;
+	&__top {}
+	&__bottom {
+		background: var(--color-dark-grey);
+		display: none;
+		@media (min-width: $screen-sm) {
+			display: block;
+		}
+	}
+	&__inner {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		padding: 20px 0;
+		@media (min-width: $screen-sm) {
+			display: grid;
+			grid-gap: 16px 24px;
+			grid-template-columns: 104px auto auto 170px;
+			grid-template-areas:
+					'logo  worktime phone button'
+					'main-nav main-nav . city';
+			padding: 16px 0;
+		}
+		@media (min-width: $screen-md) {
+			grid-template-columns: 104px auto auto auto 170px;
+			grid-template-areas:
+					'logo phone worktime . button'
+					'. main-nav main-nav . city';
+		}
+		@media (min-width: $screen-lg) {
+			align-items: center;
+			display: flex;
+			grid-gap: 0;
+			justify-content: flex-start;
+			padding: 16px 0;
+		}
+	}
+	&__logo {
+		grid-area: logo;
+		margin-right: auto;
+		@media (min-width: $screen-lg) {
+			margin: 0 32px 0 0;
+		}
+	}
+	&__logo-img {
+		fill: var(--color-primary-logo);
+		height: 22px;
+		width: 57px;
+		@media (min-width: $screen-sm) {
+			height: 29px;
+			width: 74px;
+		}
+	}
+	&__main-nav {
+		grid-area: main-nav;
+		display: none;
+		@media (min-width: $screen-sm) {
+			display: block;
+		}
+	}
+	&__city {
+		display: none;
+		grid-area: city;
+		@media (min-width: $screen-sm) {
+			display: block;
+		}
+		@media (min-width: $screen-lg) {
+			margin: 0 auto 0 56px;
+		}
+	}
+	&__worktime {
+		display: none;
+		font-size: 14px;
+		font-weight: 500;
+		grid-area: worktime;
+		line-height: 1.25;
+		margin: 0 24px 0 0;
+		white-space: nowrap;
+		@media (min-width: $screen-sm) {
+			display: block;
+		}
+	}
+	&__phone {
+		color: var(--color-typography);
+		grid-area: phone;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 115%;
+		text-decoration: none;
+		margin: 0 28px 0 0;
+		transition: color .25s ease;
+		user-select: none;
+		white-space: nowrap;
+		&:hover {
+			color: var(--color-typography-accent);
+		}
+		@media (min-width: $screen-sm) {
+			margin: 0;
+		}
+		@media (min-width: $screen-lg) {
+			margin-right: 32px;
+		}
+	}
+	&__menu {
+		border-radius: 4px;
+		cursor: pointer;
+		display: flex;
+		height: 32px;
+		margin: -8px;
+		padding: 8px 7px;
+		transition: background .25s ease;
+		width: 32px;
+		@media (min-width: $screen-sm) {
+			display: none;
+		}
+	}
+	&__icon {
+		background: var(--color-primary-logo);
+		border-radius: 1px;
+		display: block;
+		height: 2px;
+		margin: auto;
+		position: relative;
+		width: 18px;
+		.open-nav & {
+			height: 0;
+			width: 20px;
+		}
+		&::after,
+		&::before {
+			background: var(--color-primary-logo);
+			border-radius: 1px;
+			content: '';
+			display: block;
+			height: 2px;
+			position: absolute;
+			transition: transform .25s ease;
+			width: 18px;
+			will-change: transform;
+		}
+		&::after {
+			transform: translateY(5px) rotate(0);
+			.open-nav & {
+				transform: translateY(-1px) rotate(-225deg);
+				width: 20px;
+			}
+		}
+		&::before {
+			transform: translateY(-5px) rotate(0);
+			.open-nav & {
+				transform: translateY(-1px) rotate(225deg);
+				width: 20px;
+			}
+		}
+	}
+	&__button {
+		grid-area: button;
+		display: none;
+		@media (min-width: $screen-sm) {
+			display: block;
+		}
+	}
+}

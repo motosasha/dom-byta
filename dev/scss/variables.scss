@@ -1,0 +1,34 @@
+:root {
+	--font-family-base:				var(--font-family-sans);
+	--font-family-sans:				'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	--font-family-serif:			Georgia, 'Times New Roman', Times, serif;
+
+	--color-typography:				#010101;
+	--color-typography-inverse:		#ffffff;
+	--color-typography-grey:		#686868;
+	--color-typography-accent:		#1c5bff;
+
+	--color-black:					#000000;
+	--color-white:					#ffffff;
+
+	--color-black-tint:				rgba(31, 31, 31, 0.55);
+	--color-button:					linear-gradient(120.88deg, #f3a000 -21.52%, #f38300 213.1%);
+	--color-button-hover:			linear-gradient(120.88deg, #F37400 -21.52%, #F38300 213.1%);
+	--color-dark-grey:				#313131;
+	--color-light-grey:				#f3f3f3;
+	--color-orange-tint:			rgba(255, 168, 0, 0.5);
+	--color-orange:					#ffa800;
+	--color-primary-logo:			#010101;
+	--color-shadow:					rgba(0, 0, 0, 0.1);
+	--color-switcher-black:			#010101;
+	--color-switcher-white:			#ffffff;
+
+	--body-bg:						#ffffff;
+	--body-color:					#000000;
+
+	--font-size-base:				1rem;
+	--font-size-root:				null;
+
+	--font-weight-base:				var(--font-weight-normal);
+	--line-height-base:				1;
+}

@@ -1,0 +1,15 @@
+//- Все примеси в этом файле должны начинаться c имени блока (feedback-card)
+
+mixin feedback-card(name, date, rate, comment)
+	.feedback-card
+		.feedback-card__top
+			.feedback-card__left
+				.feedback-card__name!= name
+				.feedback-card__date!= date
+			.feedback-card__right
+				.feedback-card__rate!= rate
+					span /5
+				.feedback-card__stars
+					.stars(style='--rating:' + rate + ';')
+		.feedback-card__body
+			.feedback-card__comment!= comment

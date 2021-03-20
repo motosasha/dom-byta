@@ -1,0 +1,12 @@
+// В этом файле должны быть стили для БЭМ-блока price, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.price {
+	&__inner {
+		padding: 24px 0 32px 0;
+		@media (min-width: $screen-sm) {
+			padding: 56px 0;
+		}
+	}
+}

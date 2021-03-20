@@ -1,0 +1,16 @@
+// В этом файле должны быть стили для БЭМ-блока articles-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.articles-list {
+	@media (min-width: $screen-sm) {
+		margin-top: 32px;
+	}
+	&__item {}
+	&__item + &__item {
+		margin-top: 40px;
+		@media (min-width: $screen-sm) {
+			margin-top: 64px;
+		}
+	}
+}

@@ -1,0 +1,79 @@
+// В этом файле должны быть стили для БЭМ-блока feedback, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.feedback {
+	background: url('/img/img__feedback.jpg') no-repeat;
+	background-size: cover;
+	background-position: 0 30%;
+	position: relative;
+	&::after {
+		background: var(--color-black-tint);
+		content: '';
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+	&__inner {
+		padding: 32px 0;
+		position: relative;
+		z-index: 2;
+		@media (min-width: $screen-sm) {
+			padding: 56px 0 40px 0;
+		}
+	}
+	&__slider {
+		margin: 0 -16px 32px;
+		position: relative;
+		@media (min-width: $screen-sm) {
+			margin: 0 0 48px;
+		}
+		@media (min-width: $screen-lg) {
+			margin: 0 0 16px;
+			padding: 0;
+		}
+	}
+	.swiper-pagination-bullet {
+		background: var(--color-white) !important;
+		&-active {
+			background: var(--color-typography-accent) !important;
+		}
+	}
+	
+	&__heading {
+		color: var(--color-typography-inverse);
+	}
+	&__description {
+		color: var(--color-typography-inverse) !important;
+		font-size: 16px;
+		line-height: 1.75;
+		margin-top: 16px;
+		text-align: center;
+		span {
+			font-weight: 600;
+		}
+	}
+	&__button {
+		margin: 0 auto 16px;
+		width: 174px;
+	}
+	&__link {
+		color: var(--color-typography-inverse);
+		display: block;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 100%;
+		margin: 0 auto;
+		text-align: center;
+		text-decoration: none;
+		transition: all .25s ease;
+		width: 164px;
+		&:hover {
+			opacity: .8;
+		}
+	}
+}

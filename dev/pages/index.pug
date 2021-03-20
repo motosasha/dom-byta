@@ -1,0 +1,375 @@
+extends ../pug/layout_default.pug
+
+block variables
+	- var isMainPage = true
+
+block meta
+	title Главная страница
+
+block content
+	section.hero
+		.hero__inner
+			.grid
+				.grid__row
+					.grid__col.grid__col_md-6
+						h1.hero__heading Гидродинамичеcкая очистка канализации <span>от&nbsp;350&nbsp;₽</span>
+					.grid__col.grid__col_md-6
+						ul.hero__grid
+							li.hero__grid-item
+								svg.hero__icon.svg
+									use(xlink:href='/img/svgSprite.svg#icon__line')
+								p.hero__description Бесплатный замер
+							li.hero__grid-item
+								svg.hero__icon.svg
+									use(xlink:href='/img/svgSprite.svg#icon__time')
+								p.hero__description Приезд 30 минут
+							li.hero__grid-item
+								svg.hero__icon.svg
+									use(xlink:href='/img/svgSprite.svg#icon__people')
+								p.hero__description Все маcтера РФ
+							li.hero__grid-item
+								svg.hero__icon.svg
+									use(xlink:href='/img/svgSprite.svg#icon__mask')
+								p.hero__description Мастера в масках и пречатках
+						form.form.hero-form
+							.hero-form__grid
+								h2.hero-form__title Перезвоним в течение 1 минуты!
+								.hero-form__grid-item
+									label.form__field
+										input.form__input#heroPhone(required='required' type='text' placeholder='+7 (___) ___-__-__')
+								.hero-form__grid-item
+									label.checkbox
+										input.checkbox__input(type='checkbox' checked='checked')
+										.checkbox__fake-input
+											svg.checkbox__mark
+												use(xlink:href='/img/svgSprite.svg#icon__checkbox')
+										.checkbox__label Принимаю условия <a href='#'>пользовательского соглашения</a> и <a href='#'>соглашения о персональных данных</a>
+								.hero-form__grid-item
+									button.button Вызвать мастера
+										span.button__helper
+						a.hero__whatsapp(href='https://wa.me/7950123456' target='_blank')
+							svg.hero__whatsapp-icon.svg
+								use(xlink:href='/img/svgSprite.svg#icon__whatsapp')
+							.hero__whatsapp-title Написать мастеру в WhatsApp
+	section.section.advantage
+		.advantage__inner
+			.grid
+				.grid__row
+					.grid__col
+						h1.section__heading.advantage__heading Наши преимущества
+						.advantage__slider
+							.swiper-container.swiper-advantage
+								.swiper-wrapper.swiper-advantage__wrapper
+									+swiper-advantage([
+										{
+											icon: 'speed',
+											title: 'Скорость',
+											description: 'Наш мастер приедет к вам через 30 минут после обращения или в удобное для вас время'
+										},
+										{
+											icon: 'protect',
+											title: 'Безопасность',
+											description: 'Все мастера перед началом работы измеряют температуру. Приезжают в масках и перчатках'
+										},
+										{
+											icon: 'list',
+											title: 'Надежность',
+											description: 'Работаем с 2016 года. За 2019 год выполнили более 20 тыс. заказов'
+										},
+										{
+											icon: 'pay',
+											title: 'Гарантия возврата',
+											description: 'Если на заказе что-то пойдет не так, мы возьмем сумму ущерба'
+										},
+										{
+											icon: 'delivery',
+											title: 'Покупка и доставка комплектующих',
+											description: 'Работаем с 2016 года. За 2019 год выполнили более 20 тыс. заказов'
+										},
+										{
+											icon: 'sell',
+											title: 'Скидки',
+											description: 'Если на заказе что-то пойдет не так, мы возьмем сумму ущерба'
+										},
+										{
+											icon: 'delivery',
+											title: 'Гарантия до 3х лет',
+											description: 'Если на заказе что-то пойдет не так, мы возьмем сумму ущерба'
+										},
+										{
+											icon: 'sell',
+											title: 'Любая форма оплаты',
+											description: 'Если на заказе что-то пойдет не так, мы возьмем сумму ущерба'
+										}
+									])
+							.swiper-button.swiper-button-prev.swiper-advantage__button.swiper-advantage__button_prev
+								svg.svg.swiper-button-icon
+									use(xlink:href='/img/svgSprite.svg#icon__slider-arrow_left')
+							.swiper-button.swiper-button-next.swiper-advantage__button.swiper-advantage__button_next
+								svg.svg.swiper-button-icon
+									use(xlink:href='/img/svgSprite.svg#icon__slider-arrow_right')
+	section.section.instruments
+		.instruments__inner
+			.grid
+				.grid__row
+					.grid__col
+						h1.section__heading.instruments__heading Инструменты для&nbsp;прочистки
+						p.section__description.instruments__description Используем только современное оборудование
+						.instruments__slider
+							.swiper-container.swiper-instruments
+								.swiper-wrapper.swiper-instruments__wrapper
+									+swiper-instruments(
+										[
+											{
+												img: 'rothenberger',
+												alt: 'Электромеханическая прочистная машина',
+												title: 'Електромеханическая прочистная машина',
+												description: 'ROTHENBERGER'
+											},
+											{
+												img: 'ridgid-k–45',
+												alt: 'Электромеханическая прочистная машина',
+												title: 'Электромеханическая прочистная машина',
+												description: 'RIDGID k–45'
+											},
+											{
+												img: 'rothenberger-rodrum-S',
+												alt: 'Электромеханическая прочистная машина',
+												title: 'Электромеханическая прочистная машина',
+												description: 'ROTHENBERGER Rodrum S'
+											},
+											{
+												img: 'rothenberger-hd-19-180b',
+												alt: 'Электромеханическая прочистная машина',
+												title: 'Электромеханическая прочистная машина',
+												description: 'ROTHENBERGER HD 19/180B'
+											},
+											{
+												img: 'rothenberger',
+												alt: 'Электромеханическая прочистная машина',
+												title: 'Електромеханическая прочистная машина',
+												description: 'ROTHENBERGER'
+											},
+										]
+									)
+							.swiper-pagination.slider-instruments__pagination
+							.swiper-button.swiper-button-prev.swiper-instruments__button.swiper-instruments__button_prev
+								svg.svg.swiper-button-icon
+									use(xlink:href='/img/svgSprite.svg#icon__slider-arrow_left')
+							.swiper-button.swiper-button-next.swiper-instruments__button.swiper-instruments__button_next
+								svg.svg.swiper-button-icon
+									use(xlink:href='/img/svgSprite.svg#icon__slider-arrow_right')
+	section.section.masters
+		.masters__inner
+			.grid
+				.grid__row
+					.grid__col
+						h1.section__heading.masters__heading Лучшие мастера сервиса
+						p.section__description.masters__description Больше 100 мастеров подключены к&nbsp;сервису. Каждый из&nbsp;них прошел тщательную проверку и&nbsp;обучился собственной академии
+						.masters__slider
+							.swiper-container.swiper-masters
+								.swiper-wrapper.swiper-masters__wrapper
+									+swiper-masters(
+										[
+											{
+												name: 'Кириллов Александр',
+												img: '1',
+												rate: '4.8',
+												xp: 'Опыт работы 10 лет',
+												works: 'Более 1260 работ'
+											},
+											{
+												name: 'Кириллов Александр',
+												img: '2',
+												rate: '4.5',
+												xp: 'Опыт работы 10 лет',
+												works: 'Более 1260 работ'
+											},
+											{
+												name: 'Кириллов Александр',
+												img: '3',
+												rate: '4.6',
+												xp: 'Опыт работы 10 лет',
+												works: 'Более 1260 работ'
+											},
+											{
+												name: 'Кириллов Александр',
+												img: '1',
+												rate: '4',
+												xp: 'Опыт работы 10 лет',
+												works: 'Более 1260 работ'
+											}
+										]
+									)
+							.swiper-pagination.slider-masters__pagination
+							.swiper-button.swiper-button-prev.swiper-masters__button.swiper-masters__button_prev
+								svg.svg.swiper-button-icon
+									use(xlink:href='/img/svgSprite.svg#icon__slider-arrow_left')
+							.swiper-button.swiper-button-next.swiper-masters__button.swiper-masters__button_next
+								svg.svg.swiper-button-icon
+									use(xlink:href='/img/svgSprite.svg#icon__slider-arrow_right')
+						a.button.masters__button(data-hystmodal='#orderModal') Вызвать мастера
+							span.button__helper
+						a.masters__whatsapp(href='https://wa.me/7950123456' target='_blank')
+							.masters__whatsapp-title Написать мастеру в WhatsApp
+							svg.masters__whatsapp-icon.svg
+								use(xlink:href='/img/svgSprite.svg#icon__whatsapp')
+	section.section.price
+		.price__inner
+			.grid
+				.grid__row
+					.grid__col
+						h1.section__heading.price__heading Цены на наши услуги
+				.grid__row
+					.grid__col.grid__col_lg-12
+						.cards-price
+							.cards-price__grid
+								+cards-price([
+									{
+										img: 'plumber',
+										alt: 'Услуги сантехника',
+										title: 'Услуги сантехника',
+										price: '250'
+									},
+									{
+										img: 'electrician',
+										alt: 'Услуги электрика',
+										title: 'Услуги электрика',
+										price: '250'
+									},
+									{
+										img: 'anti-blockage',
+										alt: 'Устранение засоров',
+										title: 'Устранение засоров',
+										price: '250'
+									},
+									{
+										img: 'master-per-hour',
+										alt: 'Мастер на час',
+										title: 'Мастер на час',
+										price: '250'
+									},
+									{
+										img: 'anti-leak',
+										alt: 'Устранение протечек',
+										title: 'Устранение протечек',
+										price: '250'
+									},
+									{
+										img: 'plumbing-repair',
+										alt: 'Ремонт сантехники',
+										title: 'Ремонт сантехники',
+										price: '250'
+									},
+									{
+										img: 'plumbing-install',
+										alt: 'Установка сантехники',
+										title: 'Установка сантехники',
+										price: '250'
+									},
+									{
+										img: 'pipe-routing',
+										alt: 'Разводка труб',
+										title: 'Разводка труб',
+										price: '250'
+									},
+									{
+										img: 'home-appliances-install',
+										alt: 'Установка бытовой техники',
+										title: 'Установка бытовой техники',
+										price: '250'
+									},
+									{
+										img: 'door-install',
+										alt: 'Установка входной двери',
+										title: 'Установка входной двери',
+										price: '250'
+									}
+								])
+	section.section.feedback
+		.feedback__inner
+			.grid
+				.grid__row
+					.grid__col
+						h1.section__heading.feedback__heading Отзывы клиентов
+						p.section__description.feedback__description На сайте #[span 1158 отзывов]
+							br
+							| Онлайн–отзывы появляются с задержкой в #[span 5–10 минут]
+						.feedback__slider
+							.swiper-container.swiper-feedback
+								.swiper-wrapper.swiper-feedback__wrapper
+									.swiper-slide.swiper-feedback__slide
+										+feedback-card('Елена', '17 декабря 2020 ', 3, 'Спасибо за работу! мастер выполнил все аккуратно, ручку дверную починил кран поменял светильник повесил, сам в магазин сходил. цена Устроила, Рекомендую!')
+									.swiper-slide.swiper-feedback__slide
+										+feedback-card('Виктор Иванович', '17 декабря 2020 ', 4, 'Квалифицированые специалисты, все объясняют, цены доступные.')
+									.swiper-slide.swiper-feedback__slide
+										+feedback-card('Евгений Смирнов', '17 декабря 2020 ', 5, 'Прекрасная работа. Оперативный выезд. Профессиональный диагноз проблеме. Качественная работа.')
+							.swiper-pagination.slider-feedback__pagination
+							.swiper-button.swiper-button-prev.swiper-feedback__button.swiper-feedback__button_prev
+								svg.svg.swiper-button-icon
+									use(xlink:href='/img/svgSprite.svg#icon__slider-arrow_left')
+							.swiper-button.swiper-button-next.swiper-feedback__button.swiper-feedback__button_next
+								svg.svg.swiper-button-icon
+									use(xlink:href='/img/svgSprite.svg#icon__slider-arrow_right')
+						a.button.feedback__button(data-hystmodal='#reviewModal') Оставить отзыв
+							span.button__helper
+						a.feedback__link(href='reviews.html') Смотреть все отзывы
+	section.section.main-content
+		.content
+			.main-content__inner
+				.grid
+					.grid__row
+						.grid__col
+							h1.section__heading.main-content__heading Центр Бытовых Услуг — онлайн-сервис для вызова сантехника или электрика
+					.grid__row
+						.grid__col.grid__col_md-6
+							.main-content__img-container
+								img.main-content__img(src='/img/img__content.png', alt='Центр Бытовых Услуг')
+						.grid__col.grid__col_md-6
+							h2.content__heading О компании
+							p.content__text Основные направления сервиса: услуги сантехника, услуги электрика и устранение засоров. Сервис по вызову мастера - это целый комплекс работ и услуг по ремонту квартир, загородных домов и офисов. В него входят услуги профессиональных дизайнеров, демонтажные работы, черновая и чистовая отделка, а также работа сантехника и электрика.
+							p.content__text В Центре Бытовых Услуг работают 200 мастеров (граждан РФ), обслуживающих Москву и Московскую область. Ежемесячно мы выполняем около 3 000 работ и получаем отзывы от благодарных клиентов.
+					.grid__row
+						.grid__col.grid__col_lg-12
+							h2.content__heading Почему именно мы?
+					.grid__row
+						.grid__col.grid__col_md-6
+							h3.content__subtitle Выгодные цены
+							p.content__text Мастер составит подробную смету расходов, с которой вы непременно ознакомитесь. Мы не «накручиваем» стоимость своих услуг, поскольку нам важно угодить клиенту и решить проблему быстро, качественно и по демократичным ценам.
+							h3.content__subtitle Помощь в закупке материалов
+							p.content__text Мастера могут самостоятельно купить все комплектующие и материалы для предстоящих работ.
+							h3.content__subtitle Никакой предоплаты
+							p.content__text Вы платите только за результат по факту выполненных работ. Мы приветствуем как наличный, так и безналичный расчет.
+							h3.content__subtitle Высокий уровень сервиса
+							p.content__text Мы используем в работе новейшие современные технологии и импортные инструменты. Каждый месяц мы проводим аттестацию мастеров, чтобы они соответствовали самым строгим требованиям конкурентоспособности.
+						.grid__col.grid__col_md-6
+							h3.content__subtitle Гарантия
+							p.content__text Мы даем гарантию до пяти лет на все виды услуг, кроме работ по устранению засоров. Ремонт по гарантии осуществляется бесплатно!
+							h3.content__subtitle Мы полностью контролируем исполнение заказа
+							p.content__text Между вами и мастером стоит надежный посредник – Центр Бытовых Услуг. Именно поэтому вам не стоит переживать о качестве работы и ее стоимости.
+							h3.content__subtitle Скидки и акции
+							p.content__text Каждый клиент попадает в список квартир, которые мы обслуживаем. Это значит, что он может вызвать нас в любое время, и мы сразу же приедем и проведем необходимые работы.
+							h3.content__subtitle Коллектив профессионалов.
+							p.content__text У нас работают 200 мастеров (граждан РФ), обслуживающих Москву и Московскую область. Ежемесячно мы выполняем около 3 000 работ и получаем отзывы от благодарных клиентов.
+	section.section.faq
+		.faq__inner
+			.grid
+				.grid__row
+					.grid__col
+						h1.section__heading.faq__heading Часто задаваемые вопросы
+						+faq(
+							[
+								{
+									'title': 'Как быстро может приехать мастер?',
+									'info': 'Наш мастер приедет к вам через 30 минут после обращения или в удобное для вас время.'
+								},
+								{
+									'title': 'Сколько будет стоить работа?',
+									'info': 'Но высокотехнологичная концепция общественного уклада создаёт предпосылки для позиций, занимаемых участниками в отношении поставленных задач.'
+								},
+								{
+									'title': 'Как вызвать мастера?',
+									'info': 'Задача организации, в особенности же начало повседневной работы по формированию позиции создаёт предпосылки для благоприятных перспектив.'
+								}
+							]
+						)

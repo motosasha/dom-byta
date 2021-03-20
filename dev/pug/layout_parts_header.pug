@@ -1,0 +1,119 @@
+header.header
+	.header__top
+		.grid
+			.grid__row
+				.grid__col
+					.header__inner
+						if isMainPage === true
+							.header__logo
+								svg.svg.header__logo-img
+									use(xlink:href='/img/svgSprite.svg#icon__logo')
+						else
+							a.header__logo(href='/')
+								svg.svg.header__logo-img
+									use(xlink:href='/img/svgSprite.svg#icon__logo')
+						nav.header__main-nav
+							+header-nav([
+								{link: 'Статьи', href: 'articles.html'},
+								{link: 'Отзывы', href: 'reviews.html'},
+								{link: 'Прайс-лист', href: '#'},
+							])
+						.header__city
+							.city-select
+								.city-select__top
+									.city-select__title Москва
+									svg.city-select__arrow.svg
+										use(xlink:href='/img/svgSprite.svg#icon__arrow')
+								.city-select__drop
+									ul.city-select__list
+										li.city-select__item
+											a.city-select__link(href='#') Санкт-Петербург
+										li.city-select__item
+											a.city-select__link(href='#') Казань
+										li.city-select__item
+											a.city-select__link(href='#') Нижний новгород
+										li.city-select__item
+											a.city-select__link(href='#') Ростов-на-Дону
+										li.city-select__item
+											a.city-select__link(href='#') Краснодар
+										li.city-select__item
+											a.city-select__link(href='#') Екатеринбург
+						.header__worktime Ежедневно с 7:00 - 24:00
+						a.header__phone(href='tel:84991107482') +7 (499) 110–74–82
+						a.button.header__button(data-hystmodal='#orderModal') Оформить заказ
+							span.button__helper
+						a.header__menu
+							span.header__icon
+	.header__bottom
+		.grid
+			.grid__row
+				.grid__col
+					nav.services-nav
+						.services-nav__section
+							.services-nav__top
+								.services-nav__title Услуги сантехника
+								svg.services-nav__arrow.svg
+									use(xlink:href='/img/svgSprite.svg#icon__arrow')
+							.services-nav__drop
+								ul.services-nav__list
+									li.services-nav__item
+										a.services-nav__link(href='#') Вызов сантехника на дом
+									li.services-nav__item
+										a.services-nav__link(href='#') Установка сантехники
+									li.services-nav__item
+										a.services-nav__link(href='#') Замена сантехники
+									li.services-nav__item
+										a.services-nav__link(href='#') Разводка труб
+									li.services-nav__item
+										a.services-nav__link(href='#') Устранение протечек
+						.services-nav__section
+							.services-nav__top
+								.services-nav__title Услуги электрика
+								svg.services-nav__arrow.svg
+									use(xlink:href='/img/svgSprite.svg#icon__arrow')
+							.services-nav__drop
+								ul.services-nav__list
+									li.services-nav__item
+										a.services-nav__link(href='#') Пункт меню
+									li.services-nav__item
+										a.services-nav__link(href='#') Пункт меню
+									li.services-nav__item
+										a.services-nav__link(href='#') Пункт меню
+									li.services-nav__item
+										a.services-nav__link(href='#') Пункт меню
+									li.services-nav__item
+										a.services-nav__link(href='#') Пункт меню
+						.services-nav__section
+							.services-nav__top
+								.services-nav__title Устранение засоров
+								svg.services-nav__arrow.svg
+									use(xlink:href='/img/svgSprite.svg#icon__arrow')
+							.services-nav__drop
+								ul.services-nav__list
+									li.services-nav__item
+										a.services-nav__link(href='#') Пункт меню
+									li.services-nav__item
+										a.services-nav__link(href='#') Пункт меню
+									li.services-nav__item
+										a.services-nav__link(href='#') Пункт меню
+									li.services-nav__item
+										a.services-nav__link(href='#') Пункт меню
+									li.services-nav__item
+										a.services-nav__link(href='#') Пункт меню
+						.services-nav__section
+							.services-nav__top
+								.services-nav__title Мастер на час
+								svg.services-nav__arrow.svg
+									use(xlink:href='/img/svgSprite.svg#icon__arrow')
+							.services-nav__drop
+								ul.services-nav__list
+									li.services-nav__item
+										a.services-nav__link(href='#') Пункт меню
+									li.services-nav__item
+										a.services-nav__link(href='#') Пункт меню
+									li.services-nav__item
+										a.services-nav__link(href='#') Пункт меню
+									li.services-nav__item
+										a.services-nav__link(href='#') Пункт меню
+									li.services-nav__item
+										a.services-nav__link(href='#') Пункт меню

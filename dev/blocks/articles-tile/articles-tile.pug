@@ -1,0 +1,16 @@
+//- Все примеси в этом файле должны начинаться c имени блока (articles-tile)
+
+mixin articles-tile(date, title, list)
+	.articles-tile.grid__row
+		.grid__col.grid__col_xs-12.grid__col_md-4
+			.articles-tile__top
+				.articles-tile__date!= date
+				img.articles-tile__img(src='/img/img__articles_cabel.jpg', alt='')
+		.grid__col.grid__col_xs-12.grid__col_md-8
+			.articles-tile__bottom
+				h2.articles-tile__title!= title
+				p.articles-tile__subtitle В этой статье:
+				ul.articles-tile__list
+					each item in list
+						li.articles-tile__li!= item.li
+				a.articles-tile__more(href='article.html') Читать далее

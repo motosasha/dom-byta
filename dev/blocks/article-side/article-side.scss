@@ -1,0 +1,27 @@
+// В этом файле должны быть стили для БЭМ-блока article-side, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.article-side {
+	display: grid;
+	grid-gap: 24px;
+	@media (min-width: $screen-sm) {
+		grid-gap: 32px;
+		grid-template-columns: 1fr 1fr;
+		padding-top: 16px;
+	}
+	@media (min-width: $screen-md) {
+		grid-gap: 40px;
+		grid-template-columns: 1fr;
+	}
+	@media (min-width: $screen-lg) {
+		grid-gap: 40px;
+	}
+	&__item {}
+	&__title {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 2;
+		margin-bottom: 16px;
+	}
+}
