@@ -4,7 +4,7 @@
 
 .hero {
 	color: var(--color-typography-inverse);
-	background: url('/img/img__hero_main.jpg') no-repeat center center;
+	background: url('../img/img__hero_main.jpg') no-repeat center center;
 	background-size: cover;
 	position: relative;
 	&::after {

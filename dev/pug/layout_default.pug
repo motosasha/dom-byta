@@ -18,7 +18,7 @@ html(class='no-js', lang='ru-RU')
 		meta(name='robots', content='index, follow')
 		meta(name='theme-color', content='#000000')
 
-		link(rel='icon', type='image/png', href='/img/favicon/favicon-32x32.png', sizes='32x32')
+		link(rel='icon', type='image/png', href='img/favicon/favicon-32x32.png', sizes='32x32')
 		link(rel='preconnect' href='https://fonts.gstatic.com')
 		link(href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' rel='stylesheet')
 
@@ -43,7 +43,7 @@ html(class='no-js', lang='ru-RU')
 			.page__footer
 				include ../pug/layout_parts_footer.pug
 
-		script(src='/js/main.js')
+		script(src='js/main.js')
 		block modals
 			a(data-hystmodal='#thanksModal' hidden) Вызов окна «Спасибо»
 			#orderModal.hystmodal(aria-hidden='true')
@@ -52,9 +52,9 @@ html(class='no-js', lang='ru-RU')
 						.modal.modal_order
 							button.modal__close(data-hystclose='')
 								svg.svg
-									use(xlink:href='/img/svgSprite.svg#icon__cross')
+									use(xlink:href='img/svgSprite.svg#icon__cross')
 							.modal__top
-								img.modal__img(src='/img/avatar__worker_01.png', alt='')
+								img.modal__img(src='img/avatar__worker_01.png', alt='')
 								.modal__text Точная стоимость работ отпределяется специальстом после осмотра.
 								.modal__text.modal__text_bold Выезд мастера — бесплатный!
 							.form#orderForm
@@ -99,7 +99,7 @@ html(class='no-js', lang='ru-RU')
 						.modal.modal_review
 							button.modal__close(data-hystclose='')
 								svg.svg
-									use(xlink:href='/img/svgSprite.svg#icon__cross')
+									use(xlink:href='img/svgSprite.svg#icon__cross')
 							.modal__header
 								.modal__title Оставить отзыв
 							form.form
@@ -124,11 +124,11 @@ html(class='no-js', lang='ru-RU')
 						.modal.modal_thanks
 							button.modal__close(data-hystclose='')
 								svg.svg
-									use(xlink:href='/img/svgSprite.svg#icon__cross')
+									use(xlink:href='img/svgSprite.svg#icon__cross')
 							.modal__header
 								.modal__title Спасибо!
 							.modal__body
-								img.modal__img(src='/img/avatar__worker_01.png', alt='')
+								img.modal__img(src='img/avatar__worker_01.png', alt='')
 								.modal__info
 									.modal__text Ваша заявка принята!
 									.modal__text Мы свяжемся с вами в ближайшее время!
