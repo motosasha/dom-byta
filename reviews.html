@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru-RU">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.1, shrink-to-fit=no">
+		<meta name="google" content="notranslate">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="date=no">
+		<meta name="format-detection" content="address=no">
+		<meta name="format-detection" content="email=no">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="robots" content="index, follow">
+		<meta name="theme-color" content="#000000">
+		<link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+		<title>Отзывы</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body><noscript>У вас отключен JavaScript. Это пугает.</noscript>
+		<div class="page">
+			<div class="page__header">
+				<header class="header">
+					<div class="header__top">
+						<div class="grid">
+							<div class="grid__row">
+								<div class="grid__col">
+									<div class="header__inner"><a class="header__logo" href="/"><svg class="svg header__logo-img">
+												<use xlink:href="/img/svgSprite.svg#icon__logo"></use>
+											</svg></a>
+										<nav class="header__main-nav">
+											<nav class="header-nav"><a class="header-nav__item" href="articles.html">Статьи</a><a class="header-nav__item" href="reviews.html">Отзывы</a><a class="header-nav__item" href="#">Прайс-лист</a></nav>
+										</nav>
+										<div class="header__city">
+											<div class="city-select">
+												<div class="city-select__top">
+													<div class="city-select__title">Москва</div><svg class="city-select__arrow svg">
+														<use xlink:href="/img/svgSprite.svg#icon__arrow"></use>
+													</svg>
+												</div>
+												<div class="city-select__drop">
+													<ul class="city-select__list">
+														<li class="city-select__item"><a class="city-select__link" href="#">Санкт-Петербург</a></li>
+														<li class="city-select__item"><a class="city-select__link" href="#">Казань</a></li>
+														<li class="city-select__item"><a class="city-select__link" href="#">Нижний новгород</a></li>
+														<li class="city-select__item"><a class="city-select__link" href="#">Ростов-на-Дону</a></li>
+														<li class="city-select__item"><a class="city-select__link" href="#">Краснодар</a></li>
+														<li class="city-select__item"><a class="city-select__link" href="#">Екатеринбург</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="header__worktime">Ежедневно с 7:00 - 24:00</div><a class="header__phone" href="tel:84991107482">+7 (499) 110–74–82</a><a class="button header__button" data-hystmodal="#orderModal">Оформить заказ<span class="button__helper"></span></a><a class="header__menu"><span class="header__icon"></span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header__bottom">
+						<div class="grid">
+							<div class="grid__row">
+								<div class="grid__col">
+									<nav class="services-nav">
+										<div class="services-nav__section">
+											<div class="services-nav__top">
+												<div class="services-nav__title">Услуги сантехника</div><svg class="services-nav__arrow svg">
+													<use xlink:href="/img/svgSprite.svg#icon__arrow"></use>
+												</svg>
+											</div>
+											<div class="services-nav__drop">
+												<ul class="services-nav__list">
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Вызов сантехника на дом</a></li>
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Установка сантехники</a></li>
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Замена сантехники</a></li>
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Разводка труб</a></li>
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Устранение протечек</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="services-nav__section">
+											<div class="services-nav__top">
+												<div class="services-nav__title">Услуги электрика</div><svg class="services-nav__arrow svg">
+													<use xlink:href="/img/svgSprite.svg#icon__arrow"></use>
+												</svg>
+											</div>
+											<div class="services-nav__drop">
+												<ul class="services-nav__list">
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Пункт меню</a></li>
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Пункт меню</a></li>
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Пункт меню</a></li>
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Пункт меню</a></li>
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Пункт меню</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="services-nav__section">
+											<div class="services-nav__top">
+												<div class="services-nav__title">Устранение засоров</div><svg class="services-nav__arrow svg">
+													<use xlink:href="/img/svgSprite.svg#icon__arrow"></use>
+												</svg>
+											</div>
+											<div class="services-nav__drop">
+												<ul class="services-nav__list">
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Пункт меню</a></li>
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Пункт меню</a></li>
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Пункт меню</a></li>
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Пункт меню</a></li>
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Пункт меню</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="services-nav__section">
+											<div class="services-nav__top">
+												<div class="services-nav__title">Мастер на час</div><svg class="services-nav__arrow svg">
+													<use xlink:href="/img/svgSprite.svg#icon__arrow"></use>
+												</svg>
+											</div>
+											<div class="services-nav__drop">
+												<ul class="services-nav__list">
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Пункт меню</a></li>
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Пункт меню</a></li>
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Пункт меню</a></li>
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Пункт меню</a></li>
+													<li class="services-nav__item"><a class="services-nav__link" href="#">Пункт меню</a></li>
+												</ul>
+											</div>
+										</div>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+			</div>
+			<div class="page__menu">
+				<div class="main-nav">
+					<div class="main-nav__inner">
+						<div class="city-select">
+							<div class="city-select__top">
+								<div class="city-select__title">Москва</div><svg class="city-select__arrow svg">
+									<use xlink:href="/img/svgSprite.svg#icon__arrow"></use>
+								</svg>
+							</div>
+							<div class="city-select__drop">
+								<ul class="city-select__list">
+									<li class="city-select__item"><a class="city-select__link" href="#">Санкт-Петербург</a></li>
+									<li class="city-select__item"><a class="city-select__link" href="#">Казань</a></li>
+									<li class="city-select__item"><a class="city-select__link" href="#">Нижний новгород</a></li>
+									<li class="city-select__item"><a class="city-select__link" href="#">Ростов-на-Дону</a></li>
+									<li class="city-select__item"><a class="city-select__link" href="#">Краснодар</a></li>
+									<li class="city-select__item"><a class="city-select__link" href="#">Екатеринбург</a></li>
+								</ul>
+							</div>
+						</div>
+						<nav class="side-nav"><a class="side-nav__item" href="articles.html">Статьи</a><a class="side-nav__item" href="reviews.html">Отзывы</a><a class="side-nav__item" href="#">Прайс-лист</a></nav>
+						<nav class="side-services">
+							<div class="side-services__section">
+								<div class="side-services__top">
+									<div class="side-services__title">Услуги сантехника</div><svg class="side-services__arrow svg">
+										<use xlink:href="/img/svgSprite.svg#icon__arrow"></use>
+									</svg>
+								</div>
+								<div class="side-services__drop">
+									<ul class="side-services__list">
+										<li class="side-services__item"><a class="side-services__link" href="#">Вызов сантехника на дом</a></li>
+										<li class="side-services__item"><a class="side-services__link" href="#">Установка сантехники</a></li>
+										<li class="side-services__item"><a class="side-services__link" href="#">Замена сантехники</a></li>
+										<li class="side-services__item"><a class="side-services__link" href="#">Разводка труб</a></li>
+										<li class="side-services__item"><a class="side-services__link" href="#">Устранение протечек</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="side-services__section">
+								<div class="side-services__top">
+									<div class="side-services__title">Услуги электрика</div><svg class="side-services__arrow svg">
+										<use xlink:href="/img/svgSprite.svg#icon__arrow"></use>
+									</svg>
+								</div>
+								<div class="side-services__drop">
+									<ul class="side-services__list">
+										<li class="side-services__item"><a class="side-services__link" href="#">Пункт меню</a></li>
+										<li class="side-services__item"><a class="side-services__link" href="#">Пункт меню</a></li>
+										<li class="side-services__item"><a class="side-services__link" href="#">Пункт меню</a></li>
+										<li class="side-services__item"><a class="side-services__link" href="#">Пункт меню</a></li>
+										<li class="side-services__item"><a class="side-services__link" href="#">Пункт меню</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="side-services__section">
+								<div class="side-services__top">
+									<div class="side-services__title">Устранение засоров</div><svg class="side-services__arrow svg">
+										<use xlink:href="/img/svgSprite.svg#icon__arrow"></use>
+									</svg>
+								</div>
+								<div class="side-services__drop">
+									<ul class="side-services__list">
+										<li class="side-services__item"><a class="side-services__link" href="#">Пункт меню</a></li>
+										<li class="side-services__item"><a class="side-services__link" href="#">Пункт меню</a></li>
+										<li class="side-services__item"><a class="side-services__link" href="#">Пункт меню</a></li>
+										<li class="side-services__item"><a class="side-services__link" href="#">Пункт меню</a></li>
+										<li class="side-services__item"><a class="side-services__link" href="#">Пункт меню</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="side-services__section">
+								<div class="side-services__top">
+									<div class="side-services__title">Мастер на час</div><svg class="side-services__arrow svg">
+										<use xlink:href="/img/svgSprite.svg#icon__arrow"></use>
+									</svg>
+								</div>
+								<div class="side-services__drop">
+									<ul class="side-services__list">
+										<li class="side-services__item"><a class="side-services__link" href="#">Пункт меню</a></li>
+										<li class="side-services__item"><a class="side-services__link" href="#">Пункт меню</a></li>
+										<li class="side-services__item"><a class="side-services__link" href="#">Пункт меню</a></li>
+										<li class="side-services__item"><a class="side-services__link" href="#">Пункт меню</a></li>
+										<li class="side-services__item"><a class="side-services__link" href="#">Пункт меню</a></li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="page__body">
+				<div class="page__top">
+					<div class="grid">
+						<div class="grid__row">
+							<div class="grid__col">
+								<ul class="breadcrumbs">
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Главная</a></li>
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Страница</a></li>
+									<li class="breadcrumbs__item"><span class="breadcrumbs__span">Страница</span></li>
+								</ul>
+								<h1 class="page__title">Отзывы</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="page__content">
+					<div class="grid">
+						<div class="grid__row">
+							<div class="grid__col">
+								<div class="reviews-info">
+									<div class="reviews-info__line">Отзывы появляются с задержкой в <span>15 минут</span></div>
+									<div class="reviews-info__line">Всего отзывов: <span>1544</span></div>
+								</div>
+								<div class="reviews-list">
+									<div class="reviews-list__item">
+										<div class="feedback-card">
+											<div class="feedback-card__top">
+												<div class="feedback-card__left">
+													<div class="feedback-card__name">Елена</div>
+													<div class="feedback-card__date">17 декабря 2020 </div>
+												</div>
+												<div class="feedback-card__right">
+													<div class="feedback-card__rate">4<span>/5</span></div>
+													<div class="feedback-card__stars">
+														<div class="stars" style="--rating:4;"></div>
+													</div>
+												</div>
+											</div>
+											<div class="feedback-card__body">
+												<div class="feedback-card__comment">Квалифицированые специалисты, все объясняют, цены доступные.</div>
+											</div>
+										</div>
+									</div>
+									<div class="reviews-list__item">
+										<div class="feedback-card">
+											<div class="feedback-card__top">
+												<div class="feedback-card__left">
+													<div class="feedback-card__name">Луиза</div>
+													<div class="feedback-card__date">17 декабря 2020 </div>
+												</div>
+												<div class="feedback-card__right">
+													<div class="feedback-card__rate">5<span>/5</span></div>
+													<div class="feedback-card__stars">
+														<div class="stars" style="--rating:5;"></div>
+													</div>
+												</div>
+											</div>
+											<div class="feedback-card__body">
+												<div class="feedback-card__comment">Спасибо за работу! мастер выполнил все аккуратно, ручку дверную починил кран поменял светильник повесил, сам в магазин сходил. цена Устроила, Рекомендую!</div>
+											</div>
+										</div>
+									</div>
+									<div class="reviews-list__item">
+										<div class="feedback-card">
+											<div class="feedback-card__top">
+												<div class="feedback-card__left">
+													<div class="feedback-card__name">Виктор Иванович</div>
+													<div class="feedback-card__date">17 декабря 2020 </div>
+												</div>
+												<div class="feedback-card__right">
+													<div class="feedback-card__rate">2<span>/5</span></div>
+													<div class="feedback-card__stars">
+														<div class="stars" style="--rating:2;"></div>
+													</div>
+												</div>
+											</div>
+											<div class="feedback-card__body">
+												<div class="feedback-card__comment">Заявка выполнена вовремя. Неисправность устранена. Не ожидала, что можно в то же день получить выполнение услуги. Всем довольна, мастер хороший. За всё спасибо!</div>
+											</div>
+										</div>
+									</div>
+									<div class="reviews-list__item">
+										<div class="feedback-card">
+											<div class="feedback-card__top">
+												<div class="feedback-card__left">
+													<div class="feedback-card__name">Луиза</div>
+													<div class="feedback-card__date">17 декабря 2020 </div>
+												</div>
+												<div class="feedback-card__right">
+													<div class="feedback-card__rate">3<span>/5</span></div>
+													<div class="feedback-card__stars">
+														<div class="stars" style="--rating:3;"></div>
+													</div>
+												</div>
+											</div>
+											<div class="feedback-card__body">
+												<div class="feedback-card__comment">Очень понравилась работа мастера. Быстро приехал, оперативно и чисто отремонтировал. Сам сходил в магазин за необходимым, предоставил чеки. Спасибо.</div>
+											</div>
+										</div>
+									</div>
+									<div class="reviews-list__item">
+										<div class="feedback-card">
+											<div class="feedback-card__top">
+												<div class="feedback-card__left">
+													<div class="feedback-card__name">Татьяна</div>
+													<div class="feedback-card__date">17 декабря 2020 </div>
+												</div>
+												<div class="feedback-card__right">
+													<div class="feedback-card__rate">1<span>/5</span></div>
+													<div class="feedback-card__stars">
+														<div class="stars" style="--rating:1;"></div>
+													</div>
+												</div>
+											</div>
+											<div class="feedback-card__body">
+												<div class="feedback-card__comment">На организацию вызывали сантехника был засор. Все было сделано аккуратно и Очень быстро. Спасибо Огромное компании и Мастеру!</div>
+											</div>
+										</div>
+									</div>
+									<div class="reviews-list__item">
+										<div class="feedback-card">
+											<div class="feedback-card__top">
+												<div class="feedback-card__left">
+													<div class="feedback-card__name">Евгений Смирнов</div>
+													<div class="feedback-card__date">17 декабря 2020 </div>
+												</div>
+												<div class="feedback-card__right">
+													<div class="feedback-card__rate">5<span>/5</span></div>
+													<div class="feedback-card__stars">
+														<div class="stars" style="--rating:5;"></div>
+													</div>
+												</div>
+											</div>
+											<div class="feedback-card__body">
+												<div class="feedback-card__comment">Прекрасная работа. Оперативный выезд. Профессиональный диагноз проблеме. Качественная работа.</div>
+											</div>
+										</div>
+									</div>
+									<div class="reviews-list__item">
+										<div class="feedback-card">
+											<div class="feedback-card__top">
+												<div class="feedback-card__left">
+													<div class="feedback-card__name">Августина</div>
+													<div class="feedback-card__date">17 декабря 2020 </div>
+												</div>
+												<div class="feedback-card__right">
+													<div class="feedback-card__rate">2<span>/5</span></div>
+													<div class="feedback-card__stars">
+														<div class="stars" style="--rating:2;"></div>
+													</div>
+												</div>
+											</div>
+											<div class="feedback-card__body">
+												<div class="feedback-card__comment">Мастера пригласили к 16 часам работа была закончена через час мастер грамотно и быстро устранил неполадки . Огромное спасибо за вашу оперативную работу!</div>
+											</div>
+										</div>
+									</div>
+									<div class="reviews-list__item">
+										<div class="feedback-card">
+											<div class="feedback-card__top">
+												<div class="feedback-card__left">
+													<div class="feedback-card__name">Леонид</div>
+													<div class="feedback-card__date">17 декабря 2020 </div>
+												</div>
+												<div class="feedback-card__right">
+													<div class="feedback-card__rate">3<span>/5</span></div>
+													<div class="feedback-card__stars">
+														<div class="stars" style="--rating:3;"></div>
+													</div>
+												</div>
+											</div>
+											<div class="feedback-card__body">
+												<div class="feedback-card__comment">Спасибо,вам за оперативность, и качественную работу</div>
+											</div>
+										</div>
+									</div>
+									<div class="reviews-list__item">
+										<div class="feedback-card">
+											<div class="feedback-card__top">
+												<div class="feedback-card__left">
+													<div class="feedback-card__name">Марина</div>
+													<div class="feedback-card__date">17 декабря 2020 </div>
+												</div>
+												<div class="feedback-card__right">
+													<div class="feedback-card__rate">4<span>/5</span></div>
+													<div class="feedback-card__stars">
+														<div class="stars" style="--rating:4;"></div>
+													</div>
+												</div>
+											</div>
+											<div class="feedback-card__body">
+												<div class="feedback-card__comment">Делают качественно, быстро и без лишней грязи. Кашперов Роман выше всяких похвал. Мастер золотые руки.</div>
+											</div>
+										</div>
+									</div>
+									<div class="reviews-list__item">
+										<div class="feedback-card">
+											<div class="feedback-card__top">
+												<div class="feedback-card__left">
+													<div class="feedback-card__name">Яна</div>
+													<div class="feedback-card__date">17 декабря 2020 </div>
+												</div>
+												<div class="feedback-card__right">
+													<div class="feedback-card__rate">1<span>/5</span></div>
+													<div class="feedback-card__stars">
+														<div class="stars" style="--rating:1;"></div>
+													</div>
+												</div>
+											</div>
+											<div class="feedback-card__body">
+												<div class="feedback-card__comment">Спасибо мастеру Сергею за пунктуальность и качественно выполненную работу. Очень удобно, что мастер сам может приобрести запасные части. Сервисом самой компании тоже осталась довольна. Рекомендую</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="reviews-bottom">
+									<div class="reviews-bottom__line">Нам важно ваше мнение!</div><a class="button reviews-bottom__button" data-hystmodal="#reviewModal">Оставить отзыв<span class="button__helper"></span></a>
+								</div>
+								<div class="pagination">
+									<div class="pagination__item"><span class="pagination__link pagination__link_arrow"><svg class="pagination__icon svg"><use xlink:href="/img/svgSprite.svg#icon__slider-arrow_left"></use></svg></span></div>
+									<div class="pagination__item"><span class="pagination__link pagination__link_active">1</span></div>
+									<div class="pagination__item"><a class="pagination__link" href="#">2</a></div>
+									<div class="pagination__item"><a class="pagination__link" href="#">3</a></div>
+									<div class="pagination__item"><span class="pagination__span">...</span></div>
+									<div class="pagination__item"><a class="pagination__link" href="#">10</a></div>
+									<div class="pagination__item"><a class="pagination__link pagination__link_arrow" href="#"><svg class="pagination__icon svg">
+												<use xlink:href="/img/svgSprite.svg#icon__slider-arrow_right"></use>
+											</svg></a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page__footer">
+				<footer class="footer">
+					<div class="grid">
+						<div class="grid__row">
+							<div class="grid__col">
+								<div class="footer__inner">
+									<div class="footer__top">
+										<div class="footer__logo"><svg class="svg footer__logo-img">
+												<use xlink:href="/img/svgSprite.svg#icon__logo"></use>
+											</svg></div>
+										<nav class="footer__services"><a class="footer__link" href="#">Услуги сантехника</a><a class="footer__link" href="#">Услуги электрика</a><a class="footer__link" href="#">Устранение засоров</a><a class="footer__link" href="#">Мастер на час</a></nav>
+										<nav class="footer__nav"><a class="footer__link" href="articles.html">Статьи</a><a class="footer__link" href="reviews.html">Отзывы</a><a class="footer__link" href="#">Прайс–лист</a></nav>
+									</div>
+									<div class="footer__bottom">
+										<address class="footer__address">Москва, Ленинский пр., д. 111, 119421,<br>ИНН: 7703410444,<br>ОГРН: 1167746459825<br><a class="footer__mail" href="mailto:support@santehnik-home.ru">support@santehnik-home.ru</a></address>
+										<div class="footer__connection"><a class="footer__phone" href="tel:84991107482">+7 (499) 110–74–82</a><a class="button footer__button" data-hystmodal="#orderModal">Оставить заявку<span class="button__helper"></span></a></div>
+										<div class="footer__wa"><a class="footer__whatsapp" href="https://wa.me/7950123456" target="_blank">
+												<div class="footer__whatsapp-title">Написать мастеру в WhatsApp</div><svg class="footer__whatsapp-icon svg">
+													<use xlink:href="/img/svgSprite.svg#icon__whatsapp"></use>
+												</svg>
+											</a></div>
+									</div>
+								</div>
+								<div class="footer__under">
+									<div class="footer__copy">2021 © ООО «Центр бытовых услуг»</div><a class="footer__copy-link" href="#">Политика конфиденциальности</a><a class="footer__copy-link" href="#">Пользовательское соглашение</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div><script src="/js/main.js"></script><a data-hystmodal="#thanksModal" hidden>Вызов окна «Спасибо»</a>
+		<div class="hystmodal" id="orderModal" aria-hidden="true">
+			<div class="hystmodal__wrap">
+				<div class="hystmodal__window" role="dialog" aria-modal="true">
+					<div class="modal modal_order"><button class="modal__close" data-hystclose=""><svg class="svg">
+								<use xlink:href="/img/svgSprite.svg#icon__cross"></use>
+							</svg></button>
+						<div class="modal__top"><img class="modal__img" src="/img/avatar__worker_01.png" alt="">
+							<div class="modal__text">Точная стоимость работ отпределяется специальстом после осмотра.</div>
+							<div class="modal__text modal__text_bold">Выезд мастера — бесплатный!</div>
+						</div>
+						<div class="form" id="orderForm">
+							<div class="modal__header">
+								<div class="modal__title">Оформить заказ</div>
+							</div>
+							<div class="modal__form">
+								<div class="modal__form-page modal__form-page_1">
+									<div class="modal__step">1/<span>2</span></div>
+									<div class="modal__grid"><label class="form__field form__field_mw"><input class="form__input" required type="text" placeholder="Имя"></label><label class="form__field form__field_mw"><input class="form__input" id="modalPhone" required type="text" placeholder="+7 (___) ___-__-__"></label><label class="form__field"><textarea class="form__textarea" required placeholder="Опишите вашу проблему"></textarea></label></div><a class="modal__next">Далее</a>
+								</div>
+								<div class="modal__form-page modal__form-page_2">
+									<div class="modal__step">2/<span>2</span></div>
+									<div class="form__row"><label class="form__field"><input class="form__input" id="dateField" required type="text" placeholder="Дата"></label><label class="form__field"><input class="form__input" required type="text" placeholder="Время"></label></div>
+									<div class="form__row-title">Адрес</div>
+									<div class="form__row"><label class="form__field"><input class="form__input" required type="text" placeholder="Город"></label><label class="form__field"><input class="form__input" required type="text" placeholder="Улица"></label></div>
+									<div class="form__row"><label class="form__field"><input class="form__input" required type="text" placeholder="Дом"></label><label class="form__field"><input class="form__input" required type="text" placeholder="Квартира №"></label></div><button class="button modal__page-button">Заказать бесплатный выезд мастера<span class="button__helper"></span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hystmodal" id="reviewModal" aria-hidden="true">
+			<div class="hystmodal__wrap">
+				<div class="hystmodal__window" role="dialog" aria-modal="true">
+					<div class="modal modal_review"><button class="modal__close" data-hystclose=""><svg class="svg">
+								<use xlink:href="/img/svgSprite.svg#icon__cross"></use>
+							</svg></button>
+						<div class="modal__header">
+							<div class="modal__title">Оставить отзыв</div>
+						</div>
+						<form class="form">
+							<div class="modal__grid">
+								<div class="modal__stars"><select class="star-rating">
+										<option value="">Выберите рейтинг</option>
+										<option value="5">5</option>
+										<option value="4">4</option>
+										<option value="3">3</option>
+										<option value="2">2</option>
+										<option value="1">1</option>
+									</select></div><label class="form__field form__field_mw"><input class="form__input" required type="text" placeholder="Введите имя"></label><label class="form__field"><textarea class="form__textarea" required placeholder="Комментарий"></textarea></label><button class="button modal__button">Оставить отзыв<span class="button__helper"></span></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hystmodal" id="thanksModal" aria-hidden="true">
+			<div class="hystmodal__wrap">
+				<div class="hystmodal__window" role="dialog" aria-modal="true">
+					<div class="modal modal_thanks"><button class="modal__close" data-hystclose=""><svg class="svg">
+								<use xlink:href="/img/svgSprite.svg#icon__cross"></use>
+							</svg></button>
+						<div class="modal__header">
+							<div class="modal__title">Спасибо!</div>
+						</div>
+						<div class="modal__body"><img class="modal__img" src="/img/avatar__worker_01.png" alt="">
+							<div class="modal__info">
+								<div class="modal__text">Ваша заявка принята!</div>
+								<div class="modal__text">Мы свяжемся с вами в ближайшее время!</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
