@@ -7,17 +7,17 @@ header.header
 						if isMainPage === true
 							.header__logo
 								svg.svg.header__logo-img
-									use(xlink:href='img/svgSprite.svg#icon__logo')
+									use(xlink:href='img/svgSprite.svg#logo__gsr')
 						else
 							a.header__logo(href='/dom-byta/')
 								svg.svg.header__logo-img
-									use(xlink:href='img/svgSprite.svg#icon__logo')
+									use(xlink:href='img/svgSprite.svg#logo__gsr')
 						nav.header__main-nav
 							+header-nav([
 								{link: 'Статьи', href: 'articles.html'},
-								{link: 'Отзывы', href: 'reviews.html'},
-								{link: 'Прайс-лист', href: '#'},
+								{link: 'Отзывы', href: 'reviews.html'}
 							])
+							//-{link: 'Прайс-лист', href: '#'},
 						.header__city
 							.city-select
 								.city-select__top

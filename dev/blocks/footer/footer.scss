@@ -69,12 +69,8 @@
 	}
 	&__logo-img {
 		fill: var(--color-white);
-		height: 22px;
-		width: 57px;
-		@media (min-width: $screen-sm) {
-			height: 29px;
-			width: 74px;
-		}
+		height: 40px;
+		width: 150px;
 	}
 	&__services {
 		display: grid;

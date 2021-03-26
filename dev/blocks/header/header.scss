@@ -19,18 +19,18 @@
 		align-items: center;
 		display: flex;
 		justify-content: space-between;
-		padding: 20px 0;
+		padding: 15px 0;
 		@media (min-width: $screen-sm) {
 			display: grid;
 			grid-gap: 16px 24px;
-			grid-template-columns: 104px auto auto 170px;
+			grid-template-columns: 150px auto auto 170px;
 			grid-template-areas:
 					'logo  worktime phone button'
 					'main-nav main-nav . city';
 			padding: 16px 0;
 		}
 		@media (min-width: $screen-md) {
-			grid-template-columns: 104px auto auto auto 170px;
+			grid-template-columns: 150px auto auto auto 170px;
 			grid-template-areas:
 					'logo phone worktime . button'
 					'. main-nav main-nav . city';
@@ -47,16 +47,20 @@
 		grid-area: logo;
 		margin-right: auto;
 		@media (min-width: $screen-lg) {
-			margin: 0 32px 0 0;
+			margin: 0 48px 0 0;
 		}
 	}
 	&__logo-img {
 		fill: var(--color-primary-logo);
-		height: 22px;
-		width: 57px;
+		height: 24px;
+		width: 90px;
+		@media (min-width: 360px) {
+			height: 32px;
+			width: 120px;
+		}
 		@media (min-width: $screen-sm) {
-			height: 29px;
-			width: 74px;
+			height: 40px;
+			width: 150px;
 		}
 	}
 	&__main-nav {
